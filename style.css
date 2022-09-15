@@ -12,7 +12,8 @@ body
 
 
     font-size: 12px;
-    font-family:'Arial Narrow';
+    /* font-family:'Arial Narrow'; */
+    font-family: 'Exo', sans-serif;
     /* border:solid; */
 
 }
@@ -614,4 +615,5 @@ input{
 
     }
 
+    
 }
