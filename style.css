@@ -24,7 +24,7 @@ body
     grid-template-columns: 10% 70% 30%; */
     display:flex;
     width: fit-content;
-    
+
     font-weight:bold;
     position: relative;
     /* border: solid; */
@@ -36,6 +36,23 @@ ul li{
     height:8px;
 
 }
+ul li select{
+    background: none;
+    background-color: none;
+    border:none;
+    color:white;
+    font-weight:bold;
+}
+
+ul li select option{
+    background: rgba(5,21,47,255);
+    margin:5px;
+}
+option:hover{
+    background: #7ba435;
+
+}
+
 a{
     text-decoration: none;
     color: white;
@@ -85,7 +102,7 @@ a{
 
 .button
 {
-    background-color: rgb(145, 194, 60);
+    background-color: rgb(127, 161, 67);
     border-radius: 5px;
     padding: 10px 20px 10px 20px;
     width: fit-content;
@@ -95,7 +112,7 @@ a{
 
 .button:hover
 {
-    background-color: rgb(127, 161, 67);
+    background-color: rgb(145, 194, 60);
 
 }
 
@@ -143,12 +160,29 @@ display: flex;
     background-color: rgba(31,49,69,255);
     margin:3px;
 
+    /* To make it center horizontally and  vertically*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
 #winners
 {
     display:grid;
     grid-template-columns: repeat(3,auto);
+}
+
+.winner
+{
+    border:1.5px solid rgb(38, 55, 85);
+    margin:5px;
+    border-radius: 5px;
+    height:40px;
+    width:40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -159,13 +193,18 @@ display: flex;
     grid-template-columns: 3fr 1fr;
 
 }
+
+#home #image
+{
+    padding-top: 30px;
+}
 #block1
 {
     background-image: url("/images/24.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    
+
 
 }
 #block2 , #block6, #block4
@@ -228,7 +267,7 @@ display: flex;
 
 #live-streaming #vedio .play i:hover
 {
-   
+
     color:rgba(255, 255, 255, 0.769);
 }
 
@@ -341,6 +380,10 @@ border-radius: 1px;
     height:30px;
 }
 
+#upcomming-Match
+{
+    width: fit-content;
+}
 
 #upcomming-Match #heading h1,#upcomming-Match #heading p
 {
@@ -532,7 +575,19 @@ input{
     height: 10px;
     width:90px;
     margin-right: 5px;
+
     background-color: rgb(12, 2, 60);
+    /* To make it center horizontally and  vertically*/
+    display: flex;
+    gap:5px;
+    justify-content: center;
+    align-items: center;
+
+}
+#email .button:hover
+{
+    background-color: rgba(226, 8, 44, 0.788);
+
 }
 
 @media screen and (max-width: 1045px)
@@ -544,7 +599,7 @@ input{
     #home #image img
     {
         height:45vw;
-        
+
     } */
     #home{
     transform: scale(0.8);
@@ -554,11 +609,17 @@ input{
 
 @media screen and (max-width: 900px) {
 
+    body
+    {
+        width:fit-content;
+    }
     .container{
 
         /* border:greenyellow solid; */
         /* transform: scale(0.8); */
         margin: 0 auto;
+        width:fit-content;
+
     }
 
     #home
@@ -585,7 +646,7 @@ input{
         height: 200px;
         min-width:350px;
         border-radius: 30px;
-       
+
         margin-bottom:80px;
     }
 
@@ -615,5 +676,10 @@ input{
 
     }
 
-    
+    #match-cards
+    {
+        justify-content: center;
+    }
+
+
 }
