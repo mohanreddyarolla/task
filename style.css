@@ -23,8 +23,8 @@ body
     /* display:grid;
     grid-template-columns: 10% 70% 30%; */
     display:flex;
-    width: fit-content;
-
+    justify-content: space-between;
+    min-width:fit-content;
     font-weight:bold;
     position: relative;
     /* border: solid; */
@@ -82,7 +82,7 @@ a{
 
 #right-header
 {
-    /* border: solid; */
+    /* border: solid yellow; */
     /* display: grid;
     grid-template-columns: 1fr 3fr; */
     display: flex;
@@ -123,6 +123,7 @@ footer
 
     display:flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     padding: 10px;
     font-size: 12px;
     font-weight: lighter;
@@ -147,6 +148,11 @@ footer div
     line-height: 2;
 }
 
+.footer p1
+{
+    color: rgb(145, 194, 60);
+}
+
 #icons
 {
 display: flex;
@@ -167,6 +173,11 @@ display: flex;
 
 }
 
+.icon:hover
+{
+    background-color: rgba(172, 170, 170, 0.655);
+}
+
 #winners
 {
     display:grid;
@@ -185,6 +196,7 @@ display: flex;
     align-items: center;
 }
 
+/* _______________________________Home page________________________________ */
 
 #home
 {
@@ -194,23 +206,48 @@ display: flex;
 
 }
 
+
+#home #content
+{
+    padding-top: 100px;
+}
+
 #home #image
 {
     padding-top: 30px;
 }
+
+#home #content h1{
+    font-size:50px;
+    font-weight:bolder;
+}
+#home #content p1
+{
+    color:rgb(145, 194, 60);
+    font-weight: bold;
+} 
+#home #content p2
+{
+    font-size:15px;
+    font-weight:lighter;
+    
+}
+
 #block1
 {
     background-image: url("/images/24.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
+    padding-bottom:100px;
 
 }
 #block2 , #block6, #block4
 {
     background-color: rgba(0,15,46,255);
     background-attachment: fixed;
+    padding-bottom:50px;
+    padding-top: 50px;
     /* border: solid white; */
 }
 
@@ -218,6 +255,7 @@ display: flex;
 {
     /* border: solid; */
     display: flex;
+    padding-top: 20px;
 
 }
 #play .button , #live-streaming #content .button{
@@ -239,12 +277,17 @@ display: flex;
     padding-left: 20px;
 }
 
+
+/* ____________________________Live Streaming___________________________________ */
+
 #live-streaming
 {
     display:flex;
     /* flex-wrap: wrap; */
     /* border: solid red; */
-
+    /* justify-content: space-between; */
+    justify-content: center;
+    
 }
 
 #live-streaming #vedio .play
@@ -285,6 +328,12 @@ display: flex;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+#vedio #live-tag
+{
+    font-size:20px;
+    font-weight:bold;
 }
 
 #live-tag
@@ -362,7 +411,7 @@ border-radius: 1px;
 
     /* width: fit-content; */
     display: flex;
-    border:solid white;
+    /* border:solid white; */
 
     position: relative;
     top: 130px;
@@ -380,9 +429,31 @@ border-radius: 1px;
     height:30px;
 }
 
+#live-streaming #content p1
+{
+    color:rgb(145, 194, 60);
+}
+#live-streaming #content p2
+{
+    font-size: 13px;
+}
+#live-streaming #content h1{
+    font-size: 30px;
+}
+#live-streaming #content a
+{
+    padding-top:100px;
+    /* border: rgb(203, 194, 194) solid; */
+}
+
+
+/* ____________________upcomming Matches__________ */
+
 #upcomming-Match
 {
     width: fit-content;
+    margin:0 auto;
+    /* border: #7ba435 solid; */
 }
 
 #upcomming-Match #heading h1,#upcomming-Match #heading p
@@ -399,6 +470,31 @@ border-radius: 1px;
     /* border: solid; */
 }
 
+#upcomming-Match #heading h1
+{
+    font-size: 35px;
+}
+
+.match-card .live-button p 
+{
+    font-size: 10px; 
+    color: rgb(145, 194, 60);
+}
+.match-card .match-data p1 
+{
+    font-size: 10px; 
+    color: grey;
+}
+.match-card .match-data h2 
+{
+    font-size: 15px;
+}
+.match-card .match-data p2
+{
+    font-size: 10px; 
+    color: rgb(145, 194, 60);
+}
+
 #match-cards
 {
     /* display: grid;
@@ -406,6 +502,7 @@ border-radius: 1px;
 
     display: flex;
     flex-wrap: wrap;
+    
 
     /* border:solid; */
 }
@@ -533,9 +630,13 @@ border-radius: 1px;
     /* border: solid; */
     display: flex;
     flex-wrap: wrap;
+    gap:10px;
+    width: fit-content;
+    justify-content: center;
     background-color: rgb(145, 194, 60);
     border-radius: 10px;
     padding: 10px 30px ;
+    margin: 0 auto;
 }
 
 #newsletter #content
@@ -543,6 +644,12 @@ border-radius: 1px;
     /* border: red solid; */
     width: 300px;
 }
+
+#newsletter #content p1
+{
+    font-size: 15px; 
+    font-weight: bold;
+}  
 
 
 #subscribe
@@ -556,6 +663,7 @@ border-radius: 1px;
     grid-template-columns: 2fr 1fr;
 
     /* border: solid ; */
+    
     border-radius: 10px;
     background-color: white;
     height:35px;
@@ -619,6 +727,7 @@ input{
         /* transform: scale(0.8); */
         margin: 0 auto;
         width:fit-content;
+        padding:20px;
 
     }
 
@@ -631,8 +740,6 @@ input{
 
     #live-streaming
     {
-
-
         flex-wrap: wrap;
     }
 
