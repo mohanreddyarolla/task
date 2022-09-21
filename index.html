@@ -19,22 +19,25 @@
         <header id = "header">
 
             <div id="left-header">Game8</div>
-            <div id="center">
-            <ul id ="center-header">
-                <li><a href = "" class ='button'>HOME</a></li>
-                <li><a href = "" >SHOP</a></li>
-                <li>
+            
+            <div class="topnav" id="myTopnav">
+                <div id="nav">
+                    <a href="#home" class="button">HOME</a>
+                    <a href="#shop">SHOP</a>
                     <select >
                         <option value="PAGE">PAGES</option>
                         <option value="p1">PAGE1</option>
                         <option value="p2">PAGE2</option>
                         <option value="p3">PAGE3</option>
-                      </select>
-                </li>
-                <li><a href = "" >BLOG</a></li>
-                <li ><a href = "" class ='button' >CONTACT</a></li>
-            </ul>
+                    </select>
+                    <a href="#blog">BLOG</a>
+                    <a href="#contact" class="button">CONTACT</a>
+                </div>
+                <a href="javascript:void(0);" class="nav-icon" onclick="myFunction()">
+                    <i class="fa-solid fa-bars fa-2x"></i>
+                </a>
             </div>
+            
             <ul id = "right-header">
                 <li><a href = "" ><img src="/images/favpng_cart-icon.png" height="25px"></a></li>
                 <li ><a href = "" class ='button'>JOIN NOW <img src="/images/PngItem_790054.png" height="10"></a></li>
@@ -328,6 +331,17 @@
         </div>
 
     </div>
+
+    <script>
+        function myFunction() {
+          var x = document.getElementById("myTopnav");
+          if (x.className === "topnav") {
+            x.className += " responsive";
+          } else {
+            x.className = "topnav";
+          }
+        }
+    </script>
     
 </body>
 </html>
